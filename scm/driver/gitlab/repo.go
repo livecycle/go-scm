@@ -115,7 +115,7 @@ func (s *repositoryService) ListWithMinimalAccessLevel(ctx context.Context, opts
 		}
 	}
 
-	return convertRepositoryList(out), res, err
+	return repos, res, err
 }
 
 func (s *repositoryService) ListHooks(ctx context.Context, repo string, opts scm.ListOptions) ([]*scm.Hook, *scm.Response, error) {
